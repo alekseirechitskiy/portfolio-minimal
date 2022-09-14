@@ -1,10 +1,10 @@
 <template>
   <div class="about">
-    <h1 class="about__title">Simply said,<br>I love design and code.</h1>
-    <h2 class="about__subtitle">And... I love Javanese food</h2>
-    <p class="about__text">Based in the beautiful city of Bali, Indonesia.
-    I am currently exploring the <strong>UI/UX design, Tailwind-css</strong> and <strong>NextJS</strong>.</p>
-    <p class="about__text">I am either smiling or looking super serious. If it's the latter one, I am probably thinking about food.</p>
+    <h1 class="about__title title">Simply said,<br>I love design and code.</h1>
+    <h2 class="about__subtitle subtitle">And... I love food</h2>
+    <p class="about__text text">Based in Moskow, Russia, sometimes in Minsk, Belarus.<br>
+    I am currently exploring the <strong>UI/UX design, Tailwind-css</strong> and <strong>Vue 3</strong>.</p>
+    <p class="about__text text">I am either smiling or looking super serious. If it's the latter one, I am probably thinking about food.</p>
     <div class="about__slider slider">
       <div class="slider__buttons">
         <button class="slider__button slider__button--disabled slider__button-prev"></button>
