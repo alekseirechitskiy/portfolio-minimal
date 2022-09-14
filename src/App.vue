@@ -37,12 +37,13 @@ export default {
   box-sizing: border-box;
   height: 100vh;
   background-color: #F8F4F0;
+  position: relative;
+  overflow-x: hidden;
 }
 
 .application {
   display: flex;
   height: 100%;
-  // margin-left: 10%;
   max-width: 1440px;
   margin: 0 auto;
   background-color: #F8F4F0;

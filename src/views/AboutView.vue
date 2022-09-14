@@ -6,6 +6,10 @@
     I am currently exploring the <strong>UI/UX design, Tailwind-css</strong> and <strong>NextJS</strong>.</p>
     <p class="about__text">I am either smiling or looking super serious. If it's the latter one, I am probably thinking about food.</p>
     <div class="about__slider slider">
+      <div class="slider__buttons">
+        <button class="slider__button slider__button--disabled slider__button-prev"></button>
+        <button class="slider__button slider__button-next"></button>
+      </div>
       <div class="slider__item">
         <a class="slider__item-link" href="#">
           <div class="slider__item-link-hover">
@@ -19,7 +23,7 @@
           <div class="slider__item-link-hover">
             <span class="slider__item-link-text">view project</span>
           </div>
-          <img class="slider__item-image" src="../assets/about-2.jpg" alt="slide #1" width="486" height="358">
+          <img class="slider__item-image" src="../assets/about-2.jpg" alt="slide #2" width="486" height="358">
         </a>
       </div>
       <div class="slider__item">
@@ -27,7 +31,7 @@
           <div class="slider__item-link-hover">
             <span class="slider__item-link-text">view project</span>
           </div>
-          <img class="slider__item-image" src="../assets/about-2.jpg" alt="slide #1" width="486" height="358">
+          <img class="slider__item-image" src="../assets/about-3.jpg" alt="slide #3" width="486" height="358">
         </a>
       </div>
     </div>
@@ -42,7 +46,6 @@
     padding: 24px;
     text-align: left;
     padding-top: 138px;
-    overflow: hidden;
   }
 
   .about__title {
@@ -87,7 +90,43 @@
 
   .slider {
     display: flex;
-    overflow: visible;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .slider__buttons {
+    position: fixed;
+    bottom: 37%;
+    right: 24px;
+    display: flex;
+    z-index: 1;
+  }
+
+  .slider__button {
+    width: 32px;
+    height: 32px;
+    border: none;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+  }
+
+  .slider__button-prev {
+    background-image: url("../assets/icons/arrow-left.svg");
+  }
+
+  .slider__button-next {
+    background-image: url("../assets/icons/arrow-right.svg");
+  }
+
+  .slider__button-prev.slider__button--disabled {
+    background-image: url("../assets/icons/arrow-left-disabled.svg");
+  }
+
+  .slider__button-next.slider__button--disabled {
+    background-image: url("../assets/icons/arrow-right-disabled.svg");
   }
 
   .slider__item {
@@ -138,5 +177,10 @@
       left: 0;
       background-image: url('../assets/view-project.svg');
     }
+  }
+
+  .slider__item-image {
+    object-fit: cover;
+    object-position: center;
   }
 </style>
