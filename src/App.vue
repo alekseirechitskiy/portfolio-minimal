@@ -1,30 +1,107 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
+  <div class="application">
+    <div class="menu">
+      <nav class="navigation">
+        <h1 class="logo">alekseirechitskiy.</h1>
+        <router-link class="navigation__link" to="/">About</router-link>
+        <router-link class="navigation__link" to="/works">Works</router-link>
+        <router-link class="navigation__link" to="/resume">Resume</router-link>
+        <router-link class="navigation__link" to="/contact">Contact</router-link>
+        <button class="navigation__button">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 18.5C15.5899 18.5 18.5 15.5899 18.5 12C18.5 8.41015 15.5899 5.5 12 5.5C8.41015 5.5 5.5 8.41015 5.5 12C5.5 15.5899 8.41015 18.5 12 18.5Z" stroke="#000201" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M19.14 19.14L19.01 19.01M19.01 4.99L19.14 4.86L19.01 4.99ZM4.86 19.14L4.99 19.01L4.86 19.14ZM12 2.08V2V2.08ZM12 22V21.92V22ZM2.08 12H2H2.08ZM22 12H21.92H22ZM4.99 4.99L4.86 4.86L4.99 4.99Z" stroke="#000201" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>&nbsp;&nbsp;Switch dark
+        </button>
+      </nav>
+    </div>
+    <router-view/>
+  </div>
+
 </template>
+
+<script>
+export default {
+  name: 'App',
+  // components:,
+}
+</script>
 
 <style lang="scss">
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: Archivo, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  box-sizing: border-box;
+  height: 100vh;
+  background-color: #F8F4F0;
 }
 
-nav {
-  padding: 30px;
+.application {
+  display: flex;
+  height: 100%;
+  // margin-left: 10%;
+  max-width: 1440px;
+  margin: 0 auto;
+  background-color: #F8F4F0;
+}
 
-  a {
-    font-weight: bold;
-    color: #2c3e50;
+.menu {
+  flex-shrink: 0;
+  width: 22%;
+}
+
+.navigation  {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  // border: 2px solid green;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 24px;
+
+  .navigation__link {
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 26px;
+    letter-spacing: -0.8px;
+    color: rgba(#000201, 0.4);
+    margin-bottom: 24px;
+    text-transform: lowercase;
+    transition: color 0.3s;
+
+    &:hover {
+      color: #000201;
+    }
 
     &.router-link-exact-active {
-      color: #42b983;
+      color: #000201;
     }
   }
 }
+
+.logo {
+  margin: 0;
+  margin-bottom: 90px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 26px;
+  letter-spacing: -0.8px;
+  color: #000201;
+}
+
+.navigation__button {
+  margin-top: auto;
+  border: none;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+
 </style>
