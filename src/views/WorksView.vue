@@ -20,6 +20,80 @@
           <a class="tabs__link" href="#">React</a>
         </li>
       </ul>
+      <ul class="works__list">
+        <li class="works__item">
+          <a class="works__item-link" href="#">
+            <div class="works__item-link-hover">
+              <span class="works__item-link-text">view project</span>
+            </div>
+          <img class="works__item-image" src="../assets/about-3.jpg" alt="slide #2" width="328" height="246">
+          </a>
+        </li>
+        <li class="works__item">
+          <a class="works__item-link" href="#">
+            <div class="works__item-link-hover">
+              <span class="works__item-link-text">view project</span>
+            </div>
+          <img class="works__item-image" src="../assets/works-2.jpg" alt="slide #2" width="328" height="246">
+          </a>
+        </li>
+        <li class="works__item">
+          <a class="works__item-link" href="#">
+            <div class="works__item-link-hover">
+              <span class="works__item-link-text">view project</span>
+            </div>
+          <img class="works__item-image" src="../assets/works-3.jpg" alt="slide #2" width="328" height="246">
+          </a>
+        </li>
+        <li class="works__item">
+          <a class="works__item-link" href="#">
+            <div class="works__item-link-hover">
+              <span class="works__item-link-text">view project</span>
+            </div>
+          <img class="works__item-image" src="../assets/works-4.jpg" alt="slide #2" width="328" height="246">
+          </a>
+        </li>
+        <li class="works__item">
+          <a class="works__item-link" href="#">
+            <div class="works__item-link-hover">
+              <span class="works__item-link-text">view project</span>
+            </div>
+          <img class="works__item-image" src="../assets/works-5.jpg" alt="slide #2" width="328" height="246">
+          </a>
+        </li>
+        <li class="works__item">
+          <a class="works__item-link" href="#">
+            <div class="works__item-link-hover">
+              <span class="works__item-link-text">view project</span>
+            </div>
+          <img class="works__item-image" src="../assets/works-6.jpg" alt="slide #2" width="328" height="246">
+          </a>
+        </li>
+        <li class="works__item">
+          <a class="works__item-link" href="#">
+            <div class="works__item-link-hover">
+              <span class="works__item-link-text">view project</span>
+            </div>
+          <img class="works__item-image" src="../assets/works-5.jpg" alt="slide #2" width="328" height="246">
+          </a>
+        </li>
+        <li class="works__item">
+          <a class="works__item-link" href="#">
+            <div class="works__item-link-hover">
+              <span class="works__item-link-text">view project</span>
+            </div>
+          <img class="works__item-image" src="../assets/works-3.jpg" alt="slide #2" width="328" height="246">
+          </a>
+        </li>
+        <li class="works__item">
+          <a class="works__item-link" href="#">
+            <div class="works__item-link-hover">
+              <span class="works__item-link-text">view project</span>
+            </div>
+          <img class="works__item-image" src="../assets/about-3.jpg" alt="slide #2" width="328" height="246">
+          </a>
+        </li>
+      </ul>
     </div>
   </div>
 </template>
@@ -30,6 +104,7 @@
     padding: 24px;
     text-align: left;
     padding-top: 138px;
+    overflow: hidden;
   }
 
   .works__title {
@@ -57,6 +132,73 @@
       color: rgba(0, 2, 1);
     }
   }
+
+  .works__list {
+    margin: 0;
+    margin-top: 40px;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 24px;
+    overflow-y: visible;
+  }
+
+  .works__item-link {
+    display: block;
+    height: 246px;
+    position: relative;
+  }
+
+  .works__item-link-hover {
+    display: none;
+    position: absolute;
+    content: "";
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0, 0.5);
+  }
+  
+  .works__item-link:hover {
+    .works__item-link-hover {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-grow: 0;
+    }
+  }
+
+  .works__item-link-text {
+    font-family: 'Space Grotesk';
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 31px;
+    letter-spacing: -0.25px;
+    color: #FFFFFF;
+    padding-left: 32px;
+    position: relative;
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 24px;
+      height: 24px;
+      top: 4px;
+      left: 0;
+      background-image: url('../assets/view-project.svg');
+    }
+  }
+
+  .works__item-image {
+    object-fit: cover;
+    object-position: center;
+  }
+
+
+
+
 
   .tabs {
     display: inline-block;

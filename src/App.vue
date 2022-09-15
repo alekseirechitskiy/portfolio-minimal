@@ -87,7 +87,7 @@ export default {
 
 .logo {
   margin: 0;
-  margin-bottom: 90px;
+  margin-bottom: 35%;
   font-weight: 700;
   font-size: 24px;
   line-height: 26px;

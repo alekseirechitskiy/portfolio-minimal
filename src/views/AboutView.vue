@@ -45,8 +45,9 @@
     width: 100%;
     padding: 24px;
     text-align: left;
-    padding-top: 138px;
-  }
+    // padding-top: 138px;
+    padding-top: 9%;
+}
 
   .about__title {
     margin: 0;
