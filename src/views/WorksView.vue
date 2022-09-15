@@ -154,6 +154,7 @@
   .works__item-link-hover {
     // display: none;
     opacity: 0;
+    transition: opacity 0.3s;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -178,8 +179,8 @@
   .works__item-link-text {
     font-family: 'Space Grotesk';
     font-weight: 500;
-    font-size: 24px;
-    line-height: 31px;
+    font-size: 20px;
+    line-height: 26px;
     letter-spacing: -0.25px;
     color: #FFFFFF;
     padding-left: 32px;
@@ -190,9 +191,9 @@
       content: "";
       width: 24px;
       height: 24px;
-      top: 4px;
+      top: 3px;
       left: 0;
-      background-image: url('../assets/view-project.svg');
+      background-image: url('../assets/icons/view-project.svg');
     }
   }
 

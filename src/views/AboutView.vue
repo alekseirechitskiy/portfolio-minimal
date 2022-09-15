@@ -2,6 +2,7 @@
   <div class="about">
     <h1 class="about__title title">Simply said,<br>I love design and code.</h1>
     <h2 class="about__subtitle subtitle">And... I love food</h2>
+    <Text />
     <p class="about__text text">Based in Moskow, Russia, sometimes in Minsk, Belarus.<br>
     I am currently exploring the <strong>UI/UX design, Tailwind-css</strong> and <strong>Vue 3</strong>.</p>
     <p class="about__text text">I am either smiling or looking super serious. If it's the latter one, I am probably thinking about food.</p>
@@ -38,6 +39,14 @@
   </div>
 </template>
 
+<script>
+import Text from '../components/Text'
+export default {
+  name: 'About',
+  components: Text,
+}
+</script>
+
 <style lang="scss">
   .about {
     display: flex;
@@ -52,11 +61,6 @@
   .about__title {
     margin: 0;
     margin-bottom: 16px;
-    font-weight: 900;
-    font-size: 48px;
-    line-height: 117%;
-    letter-spacing: -0.8px;
-    color: #000201;
   }
 
   .about__subtitle {
@@ -180,7 +184,7 @@
       height: 24px;
       top: 4px;
       left: 0;
-      background-image: url('../assets/view-project.svg');
+      background-image: url('../assets/icons/view-project.svg');
     }
   }
 

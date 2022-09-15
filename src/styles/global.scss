@@ -1,0 +1,21 @@
+:root {
+  --bg-color: #F8F4F0;
+}
+
+
+.body {
+  margin: 0;
+  padding: 0;
+
+  &.dark-theme {
+    --bg-color: silver;
+  }
+}
+
+.title {
+  font-weight: 900;
+  font-size: 48px;
+  line-height: 117%;
+  letter-spacing: -0.8px;
+  color: #000201;
+}

@@ -2,7 +2,7 @@
   <div class="application">
     <div class="menu">
       <nav class="navigation">
-        <h1 class="logo">alekseirechitskiy.</h1>
+        <router-link class="logo" to="/">alekseirechitskiy.</router-link>
         <router-link class="navigation__link" to="/">About</router-link>
         <router-link class="navigation__link" to="/works">Works</router-link>
         <router-link class="navigation__link" to="/resume">Resume</router-link>
@@ -36,7 +36,7 @@ export default {
   color: #2c3e50;
   box-sizing: border-box;
   height: 100vh;
-  background-color: #F8F4F0;
+  background-color: var(--bg-color);
   position: relative;
   overflow-x: hidden;
 }
@@ -93,6 +93,7 @@ export default {
   line-height: 26px;
   letter-spacing: -0.8px;
   color: #000201;
+  text-decoration: none;
 }
 
 .navigation__button {
