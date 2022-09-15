@@ -103,7 +103,8 @@
     width: 100%;
     padding: 24px;
     text-align: left;
-    padding-top: 138px;
+    // padding-top: 138px;
+    padding-top: 9%;
     overflow: hidden;
   }
 
@@ -151,7 +152,11 @@
   }
 
   .works__item-link-hover {
-    display: none;
+    // display: none;
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: absolute;
     content: "";
     left: 0;
@@ -163,10 +168,10 @@
   
   .works__item-link:hover {
     .works__item-link-hover {
+      opacity: 1;
       display: flex;
       align-items: center;
       justify-content: center;
-      flex-grow: 0;
     }
   }
 

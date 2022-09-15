@@ -64,9 +64,9 @@
     width: 100%;
     padding: 24px;
     text-align: left;
-    padding-top: 138px;
+    padding-top: 9%;
+    // padding-top: 138px;
     font-family: 'Space Grotesk', Helvetica, Arial, sans-serif;
-
   }
 
   .resume__title {

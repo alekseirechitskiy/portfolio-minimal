@@ -1,6 +1,22 @@
 <template>
   <div class="contact">
-    <h1 class="contact__title">Contact</h1>
+    <h1 class="contact__title title">Contact</h1>
+    <p class="contact__text text">Let’s Chat!</p>
+    <form class="contact__form form" action="#">
+      <label class="form__input-box">
+        <p class="form__input-text">Name</p>
+        <input class="form__input-field" type="text" placeholder="Enter your name" required>
+      </label>
+      <label class="form__input-box">
+        <p class="form__input-text">Email</p>
+        <input class="form__input-field" type="email" placeholder="Enter your email" required>
+      </label>
+      <label class="form__input-box">
+        <p class="form__input-text">Message</p>
+        <textarea class="form__textarea-field" placeholder="Anything I can help? Let me know" required></textarea>
+      </label>
+      <button class="form__button button">Send</button>
+    </form>
   </div>
 </template>
 
@@ -9,7 +25,8 @@
     width: 100%;
     padding: 24px;
     text-align: left;
-    padding-top: 138px;
+    // padding-top: 138px;
+    padding-top: 9%;
 
   }
 
@@ -20,6 +37,98 @@
     line-height: 117%;
     letter-spacing: -0.8px;
     color: #000201;
-    // width: 384px;
+  }
+
+  .contact__text {
+    margin-bottom: 60px;
+    font-family: 'Space Grotesk', Arial, sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 150%;
+    letter-spacing: -0.25px;
+    color: rgba(0, 2, 1, 0.6);
+  }
+
+  .form {
+    font-family: 'Space Grotesk', Arial, sans-serif;
+    max-width: 580px;
+
+    .form__input-box {
+      display: block;
+      margin-bottom: 24px;
+    }
+
+    .form__input-text {
+      font-family: 'Space Grotesk', Arial, sans-serif;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 23px;
+      letter-spacing: -0.25px;
+      color: #000201;
+      margin: 0;
+      position: relative;
+
+      &::after {
+        position: absolute;
+        content: "*";
+        color: #F73232;
+      }
+    }
+
+    .form__input-field,
+    .form__textarea-field {
+      box-sizing: border-box;
+      display: block;
+      border: 1px solid transparent;
+      background-color: #F1ECE6;
+      padding: 16px;
+      outline: none;
+      width: 100%;
+      font-family: inherit;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 23px;
+      letter-spacing: -0.25px;
+
+      &::placeholder {
+        color: #9D9690;
+      }
+
+      &:focus {
+        border: 1px solid #D3902A;
+      }
+    }
+
+    .form__textarea-field {
+      height: 240px;
+      resize: none;
+    }
+
+    .form__button {
+      width: 164px;
+      height: 55px;
+      outline: none;
+
+      &:focus{
+        border: 2px solid #D3902A;
+        color: #D3902A;
+      }
+    }
+  }
+
+  .button {
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 23px;
+    letter-spacing: -0.25px;
+    color: #F8F4F0;
+    background-color: #000201;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 </style>

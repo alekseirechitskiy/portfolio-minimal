@@ -141,7 +141,10 @@
   }
 
   .slider__item-link-hover {
-    display: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
     position: absolute;
     content: "";
     left: 0;
@@ -149,13 +152,14 @@
     top: 0;
     bottom: 0;
     background-color: rgba(0,0,0, 0.5);
+    transition: opacity 0.3s;
   }
   
   .slider__item-link:hover {
     .slider__item-link-hover {
-      display: flex;
-      align-items: center;
-      justify-content: center;
+
+      opacity: 1;
+
     }
   }
 
