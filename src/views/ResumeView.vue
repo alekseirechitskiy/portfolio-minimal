@@ -62,11 +62,16 @@
 <style lang="scss">
   .resume {
     width: 100%;
-    padding: 24px;
+    padding: 15px;
     text-align: left;
-    padding-top: 9%;
-    // padding-top: 138px;
     font-family: 'Space Grotesk', Helvetica, Arial, sans-serif;
+    
+    @media #{$desktop}{
+      padding: 24px;
+      padding-top: 130px;
+      margin-left: 22%;
+
+    }
   }
 
   .resume__title {
@@ -77,8 +82,7 @@
     font-size: 48px;
     line-height: 117%;
     letter-spacing: -0.8px;
-    color: #000201;
-    // width: 384px;
+    color: var(--title-color);
   }
 
   .resume__text {
@@ -89,10 +93,10 @@
     max-width: 676px;
     margin: 0;
     margin-bottom: 40px;
-    color: rgba(0, 2, 1, 0.6);
+    color: var(--text-color);
 
     & strong {
-      color: rgba(0, 2, 1);
+      color: var(--title-color);
     }
   }
 
@@ -116,7 +120,7 @@
     font-weight: 600;
     font-size: 20px;
     line-height: 26px;
-    color: #000201;
+    color: var(--title-color);
   }
 
   .resume__description-title {
@@ -126,8 +130,7 @@
     font-size: 16px;
     line-height: 20px;
     letter-spacing: -0.25px;
-    color: #000201;
-
+    color: var(--title-color);
   }
 
   .resume__description-subtitle {
@@ -137,7 +140,7 @@
     font-size: 14px;
     line-height: 18px;
     letter-spacing: -0.25px;
-    color: rgba(0, 2, 1, 0.6);
+    color: var(--text-color);
   }
 
   .resume__description-list {
@@ -151,7 +154,6 @@
     font-size: 14px;
     line-height: 157%;
     letter-spacing: -0.25px;
-    color: rgba(0, 2, 1, 0.6)
+    color: var(--text-color);
   }
-
 </style>

@@ -101,11 +101,14 @@
 <style lang="scss">
   .works {
     width: 100%;
-    padding: 24px;
+    padding: 15px;
     text-align: left;
-    // padding-top: 138px;
-    padding-top: 9%;
-    overflow: hidden;
+      @media #{$desktop}{
+      padding: 24px;
+      padding-top: 130px;
+      height: auto;
+      margin-left: 22%;
+    }
   }
 
   .works__title {
@@ -115,7 +118,7 @@
     font-size: 48px;
     line-height: 117%;
     letter-spacing: -0.8px;
-    color: #000201;
+    color: var(--title-color);
   }
 
   .works__text {
@@ -127,11 +130,15 @@
     max-width: 508px;
     margin: 0;
     margin-bottom: 54px;
-    color: rgba(0, 2, 1, 0.6);
+    color: var(--text-color);
 
     & strong {
-      color: rgba(0, 2, 1);
+      color: var(--title-color);
     }
+  }
+
+  .works__tabs{
+    padding-bottom: 24px;
   }
 
   .works__list {
@@ -202,10 +209,6 @@
     object-position: center;
   }
 
-
-
-
-
   .tabs {
     display: inline-block;
   }
@@ -217,7 +220,7 @@
     list-style: none;
     display: flex;
     justify-content: flex-start;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+    border-bottom: 1px solid var(--tabs-border);
   }
 
   .tabs__item {
@@ -243,12 +246,12 @@
       height: 1px;
       top: 36px;
       left: 0;
-      background-color: rgba(0, 2, 1);
+      background-color: var(--title-color);
     }
   }
 
   .tabs__item--active .tabs__link {
-    color:rgba(0, 2, 1);
+    color: var(--title-color);
   }
 
   .tabs__link {
@@ -259,7 +262,7 @@
     font-size: 16px;
     line-height: 20px;
     letter-spacing: -0.25px;
-    color: rgba(0, 2, 1, 0.6);
+    color: var(--text-color);
   }
 
 </style>

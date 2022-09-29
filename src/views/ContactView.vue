@@ -23,11 +23,14 @@
 <style lang="scss">
   .contact {
     width: 100%;
-    padding: 24px;
+    padding: 15px;
     text-align: left;
-    // padding-top: 138px;
-    padding-top: 9%;
-
+      @media #{$desktop}{
+      padding: 24px;
+      padding-top: 130px;
+      height: auto;
+      margin-left: 22%;
+    }
   }
 
   .contact__title {
@@ -36,7 +39,7 @@
     font-size: 48px;
     line-height: 117%;
     letter-spacing: -0.8px;
-    color: #000201;
+    color: var(--title-color);
   }
 
   .contact__text {
@@ -46,7 +49,7 @@
     font-size: 24px;
     line-height: 150%;
     letter-spacing: -0.25px;
-    color: rgba(0, 2, 1, 0.6);
+    color: var(--text-color);
   }
 
   .form {
@@ -64,7 +67,7 @@
       font-size: 18px;
       line-height: 23px;
       letter-spacing: -0.25px;
-      color: #000201;
+      color: var(--title-color);
       margin: 0;
       position: relative;
 
@@ -108,6 +111,10 @@
       width: 164px;
       height: 55px;
       outline: none;
+      border: 2px solid var(--bg-color);
+      color: var(--bg-color);
+      background-color: var(--title-color);
+
 
       &:focus{
         border: 2px solid #D3902A;

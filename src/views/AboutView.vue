@@ -1,7 +1,7 @@
 <template>
   <div class="about">
     <h1 class="about__title title">Simply said,<br>I love design and code.</h1>
-    <h2 class="about__subtitle subtitle">And... I love food</h2>
+    <h2 class="about__subtitle subtitle">And... I love music</h2>
     <Text />
     <p class="about__text text">Based in Moskow, Russia, sometimes in Minsk, Belarus.<br>
     I am currently exploring the <strong>UI/UX design, Tailwind-css</strong> and <strong>Vue 3</strong>.</p>
@@ -49,14 +49,19 @@ export default {
 
 <style lang="scss">
   .about {
-    display: flex;
-    flex-direction: column;
+    padding: 15px;
     width: 100%;
-    padding: 24px;
     text-align: left;
-    // padding-top: 138px;
-    padding-top: 9%;
-}
+    background-color: var(--bg-color);
+
+    @media #{$desktop}{
+      padding: 24px;
+      padding-top: 130px;
+      height: auto;
+      margin-left: 22%;
+    }
+  }
+
 
   .about__title {
     margin: 0;
@@ -82,10 +87,10 @@ export default {
     max-width: 508px;
     margin: 0;
     margin-bottom: 24px;
-    color: rgba(0, 2, 1, 0.6);
+    color: var(--text-color);
 
     & strong {
-      color: rgba(0, 2, 1);
+      color: var(--title-color);
     }
   }
 
