@@ -35,21 +35,13 @@
 
   .contact__title {
     margin: 0;
-    font-weight: 900;
-    font-size: 48px;
-    line-height: 117%;
-    letter-spacing: -0.8px;
-    color: var(--title-color);
+
   }
 
   .contact__text {
     margin-bottom: 60px;
     font-family: 'Space Grotesk', Arial, sans-serif;
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 150%;
-    letter-spacing: -0.25px;
-    color: var(--text-color);
+
   }
 
   .form {
@@ -83,7 +75,7 @@
       box-sizing: border-box;
       display: block;
       border: 1px solid transparent;
-      background-color: #F1ECE6;
+      background-color: var(--input-field-bg);
       padding: 16px;
       outline: none;
       width: 100%;

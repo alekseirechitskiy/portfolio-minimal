@@ -5,35 +5,39 @@
     <Text />
     <p class="about__text text">Based in Moskow, Russia, sometimes in Minsk, Belarus.<br>
     I am currently exploring the <strong>UI/UX design, Tailwind-css</strong> and <strong>Vue 3</strong>.</p>
-    <p class="about__text text">I am either smiling or looking super serious. If it's the latter one, I am probably thinking about food.</p>
-    <div class="about__slider slider">
+    <p class="about__text text">
+      I am either smiling or looking super serious. If it's the latter one, I am probably thinking about food.
+    </p>
+    <div class="about__slider-wrapper">
       <div class="slider__buttons">
         <button class="slider__button slider__button--disabled slider__button-prev"></button>
         <button class="slider__button slider__button-next"></button>
       </div>
-      <div class="slider__item">
-        <a class="slider__item-link" href="#">
-          <div class="slider__item-link-hover">
-            <span class="slider__item-link-text">view project</span>
-          </div>
-          <img class="slider__item-image" src="../assets/about-1.jpg" alt="slide #1" width="486" height="358">
-        </a>
-      </div>
-      <div class="slider__item">
-        <a class="slider__item-link" href="#">
-          <div class="slider__item-link-hover">
-            <span class="slider__item-link-text">view project</span>
-          </div>
-          <img class="slider__item-image" src="../assets/about-2.jpg" alt="slide #2" width="486" height="358">
-        </a>
-      </div>
-      <div class="slider__item">
-        <a class="slider__item-link" href="#">
-          <div class="slider__item-link-hover">
-            <span class="slider__item-link-text">view project</span>
-          </div>
-          <img class="slider__item-image" src="../assets/about-3.jpg" alt="slide #3" width="486" height="358">
-        </a>
+      <div class="about__slider slider">
+        <div class="slider__item">
+          <a class="slider__item-link" href="#">
+            <div class="slider__item-link-hover">
+              <span class="slider__item-link-text">view project</span>
+            </div>
+            <img class="slider__item-image" src="../assets/about-1.jpg" alt="slide #1" width="486" height="358">
+          </a>
+        </div>
+        <div class="slider__item">
+          <a class="slider__item-link" href="#">
+            <div class="slider__item-link-hover">
+              <span class="slider__item-link-text">view project</span>
+            </div>
+            <img class="slider__item-image" src="../assets/about-2.jpg" alt="slide #2" width="486" height="358">
+          </a>
+        </div>
+        <div class="slider__item">
+          <a class="slider__item-link" href="#">
+            <div class="slider__item-link-hover">
+              <span class="slider__item-link-text">view project</span>
+            </div>
+            <img class="slider__item-image" src="../assets/about-3.jpg" alt="slide #3" width="486" height="358">
+          </a>
+        </div>
       </div>
     </div>
   </div>
@@ -49,12 +53,14 @@ export default {
 
 <style lang="scss">
   .about {
+    box-sizing:border-box;
+    width: 100vw;
     padding: 15px;
-    width: 100%;
     text-align: left;
     background-color: var(--bg-color);
 
     @media #{$desktop}{
+      width: 100%;
       padding: 24px;
       padding-top: 130px;
       height: auto;
@@ -66,23 +72,30 @@ export default {
   .about__title {
     margin: 0;
     margin-bottom: 16px;
+    max-width: 300px;
+    @media #{$desktop}{
+      max-width: 100% ;
+    }
   }
 
   .about__subtitle {
     font-family: 'Space Grotesk', Helvetica, Arial, sans-serif;
     font-weight: 700;
-    font-size: 24px;
+    font-size: 22px;
     line-height: 31px;
     color: #D3902A;
     margin: 0;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
+
+    @media #{$desktop}{
+      font-size: 24px;
+      margin-bottom: 40px;
+    }
   }
 
   .about__text {
     font-family: 'Space Grotesk', Helvetica, Arial, sans-serif;
     font-weight: 400;
-    font-size: 24px;
-    line-height: 150%;
     letter-spacing: -0.25px;
     max-width: 508px;
     margin: 0;
@@ -92,6 +105,15 @@ export default {
     & strong {
       color: var(--title-color);
     }
+  }
+
+  .about__slider-wrapper {
+    position: relative;
+    margin-top: 40px;
+    @media #{$desktop}{
+      margin-top: 60px;
+    }
+
   }
 
   .about__slider {
@@ -106,11 +128,16 @@ export default {
   }
   
   .slider__buttons {
-    position: fixed;
-    bottom: 37%;
-    right: 24px;
+    position: absolute;
+    top: -35px;
+    right: 0;
     display: flex;
     z-index: 1;
+
+    @media #{$desktop}{
+      left: 65%;
+      right: 0;
+    }
   }
 
   .slider__button {

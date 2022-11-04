@@ -1,18 +1,19 @@
 <template>
   <div class="application">
-    <button 
-    class="toggle-menu"
-    @click="toggleMenu"
-    >
-      <span></span>
-    </button>
+    
+      <button 
+        class="toggle-menu"
+        @click="toggleMenu"
+        >
+          <span></span>
+      </button>
     <div class="menu">
       <nav class="navigation">
-        <router-link @click="toggleMenu" class="logo" to="/">alekseirechitskiy.</router-link>
-        <router-link @click="toggleMenu" class="navigation__link" to="/">About</router-link>
-        <router-link @click="toggleMenu" class="navigation__link" to="/works">Works</router-link>
-        <router-link @click="toggleMenu" class="navigation__link" to="/resume">Resume</router-link>
-        <router-link @click="toggleMenu" class="navigation__link" to="/contact">Contact</router-link>
+        <router-link @click="closeMenu" class="logo" to="/">alekseirechitskiy.</router-link>
+        <router-link @click="closeMenu" class="navigation__link" to="/">About</router-link>
+        <router-link @click="closeMenu" class="navigation__link" to="/works">Works</router-link>
+        <router-link @click="closeMenu" class="navigation__link" to="/resume">Resume</router-link>
+        <router-link @click="closeMenu" class="navigation__link" to="/contact">Contact</router-link>
         <button 
           class="navigation__button"
           @click="setDarkMode"
@@ -36,9 +37,15 @@ export default {
   methods: {
     toggleMenu(){
       const menu = document.querySelector('.menu');
-      const body = document.querySelector('.body');
-        menu.classList.toggle('menu--active');
-        body.classList.toggle('overflow-hidden');
+      const app = document.querySelector('#app');
+      menu.classList.toggle('menu--active');
+      app.classList.toggle('overflow-y-hidden');
+    },
+    closeMenu(){
+      const menu = document.querySelector('.menu');
+      const app = document.querySelector('#app');
+      menu.classList.remove('menu--active');
+      app.classList.remove('overflow-y-hidden');
     },
     setDarkMode(){
       const body = document.querySelector('.body');
@@ -105,19 +112,20 @@ export default {
   background-color: var(--bg-color);
   height: 100vh;
   z-index: 5;
-  width: 384px;
-  transform: translateX(-105%);
+  // width: 384px;
+  width: 22%;
+  transform: translateY(-105%);
   transition: transform 0.3s ease-in;
 
   @media #{$desktop}{
     position: fixed;
-    transform: translateX(0%);
+    transform: translateY(0%);
     flex-shrink: 0;
-    width: 20%;
+    width: 15%;
   }
 
   &--active {
-    transform: translateX(0%);
+    transform: translateY(0%);
   }
 }
 
@@ -168,13 +176,20 @@ export default {
 }
 
 .navigation__button {
+  padding: 0;
   margin-top: auto;
+  margin-bottom: auto;
   border: none;
   background-color: transparent;
   display: flex;
   align-items: center;
   cursor: pointer;
   color: var(--title-color);
+
+  @media #{$desktop}{
+    margin-bottom: 0;
+  }
+
   svg{
     path{
       stroke: var(--title-color);

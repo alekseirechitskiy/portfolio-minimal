@@ -63,6 +63,7 @@
   .resume {
     width: 100%;
     padding: 15px;
+    padding-bottom: 40px;
     text-align: left;
     font-family: 'Space Grotesk', Helvetica, Arial, sans-serif;
     
@@ -70,7 +71,6 @@
       padding: 24px;
       padding-top: 130px;
       margin-left: 22%;
-
     }
   }
 
@@ -108,7 +108,12 @@
 
   .resume__item {
     display: flex;
+    flex-direction: column;
     margin-bottom: 24px;
+    
+    @media #{$desktop}{
+      flex-direction: row;
+    }
 
     &:last-child {
       margin-bottom: 0;
@@ -116,11 +121,15 @@
   }
 
   .resume__years {
+    margin-bottom: 10px;
     width: 180px;
     font-weight: 600;
     font-size: 20px;
     line-height: 26px;
     color: var(--title-color);
+    @media #{$desktop}{
+      margin-bottom: 0;
+    }
   }
 
   .resume__description-title {
