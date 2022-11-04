@@ -1,45 +1,15 @@
 <template>
   <div class="about">
-    <!-- <h1 class="about__title title">Simply said,<br>I love design and code.</h1>
+    <h1 class="about__title title">Simply said,<br>I love design and code.</h1>
     <h2 class="about__subtitle subtitle">And... I love music</h2>
     <Text />
     <p class="about__text text">Based in Moskow, Russia, sometimes in Minsk, Belarus.<br>
     I am currently exploring the <strong>UI/UX design, Tailwind-css</strong> and <strong>Vue 3</strong>.</p>
     <p class="about__text text">
       I am either smiling or looking super serious. If it's the latter one, I am probably thinking about food.
-    </p> -->
+    </p>
     <div class="about__slider-wrapper">
-      <!-- <div class="slider__buttons">
-        <button class="slider__button slider__button--disabled slider__button-prev swiper-button-prev"></button>
-        <button class="slider__button slider__button-next swiper-button-next"></button>
-      </div> -->
       <Swiper/>
-      <!-- <div class="about__slider slider">
-        <div class="slider__item">
-          <a class="slider__item-link" href="#">
-            <div class="slider__item-link-hover">
-              <span class="slider__item-link-text">view project</span>
-            </div>
-            <img class="slider__item-image" src="../assets/about-1.jpg" alt="slide #1" width="486" height="358">
-          </a>
-        </div>
-        <div class="slider__item">
-          <a class="slider__item-link" href="#">
-            <div class="slider__item-link-hover">
-              <span class="slider__item-link-text">view project</span>
-            </div>
-            <img class="slider__item-image" src="../assets/about-2.jpg" alt="slide #2" width="486" height="358">
-          </a>
-        </div>
-        <div class="slider__item">
-          <a class="slider__item-link" href="#">
-            <div class="slider__item-link-hover">
-              <span class="slider__item-link-text">view project</span>
-            </div>
-            <img class="slider__item-image" src="../assets/about-3.jpg" alt="slide #3" width="486" height="358">
-          </a>
-        </div>
-      </div> -->
     </div>
   </div>
 </template>
