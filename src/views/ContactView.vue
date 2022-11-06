@@ -25,11 +25,12 @@
     width: 100%;
     padding: 15px;
     text-align: left;
-      @media #{$desktop}{
+
+    @media #{$desktop}{
       padding: 24px;
       padding-top: 130px;
       height: auto;
-      margin-left: 22%;
+      // margin-left: 22%;
     }
   }
 

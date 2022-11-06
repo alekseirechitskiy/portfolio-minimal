@@ -9,7 +9,7 @@
       </button>
     <div class="menu">
       <nav class="navigation">
-        <router-link @click="closeMenu" class="logo" to="/">alekseirechitskiy.</router-link>
+        <router-link @click="closeMenu" class="logo" to="/">johnsmith.</router-link>
         <router-link @click="closeMenu" class="navigation__link" to="/">About</router-link>
         <router-link @click="closeMenu" class="navigation__link" to="/works">Works</router-link>
         <router-link @click="closeMenu" class="navigation__link" to="/resume">Resume</router-link>
@@ -49,9 +49,7 @@ export default {
     },
     setDarkMode(){
       const body = document.querySelector('.body');
-      const about = document.querySelector('.about');
       body.classList.toggle('dark-mode');
-      about.classList.toggle('dark-mode');
     }
   }
 }
@@ -72,6 +70,7 @@ export default {
 }
 
 .application {
+  position: relative;
   display: flex;
   height: auto;
   max-width: 1440px;
@@ -82,8 +81,8 @@ export default {
 .toggle-menu{
   display: block;
   position: fixed;
-  right: 3%;
-  top: 15px;
+  right: 17px;
+  top: 13px;
   z-index: 10;
   height: 40px;
   width: 40px;
@@ -92,7 +91,7 @@ export default {
   border: none;
   cursor: pointer;
 
-  @media #{$desktop}{
+  @media #{$screen-1024} {
     display: none;
   }
 
@@ -100,7 +99,7 @@ export default {
     display: block;
     background-color: var(--title-color);
     width: 100%;
-    height: 5px;
+    height: 4px;
     position: absolute;
     border-radius: 2px;
     box-shadow: 0px 9px var(--title-color), 0px -9px var(--title-color);
@@ -108,24 +107,35 @@ export default {
 }
 
 .menu {
-  position: absolute;
+  // border: 1px solid #000;
+  position: fixed;
+  top: 0;
+  left: 0;
   background-color: var(--bg-color);
   height: 100vh;
   z-index: 5;
-  // width: 384px;
-  width: 22%;
-  transform: translateY(-105%);
+  width: 100%;
+  transform: translateX(-105%);
   transition: transform 0.3s ease-in;
 
-  @media #{$desktop}{
-    position: fixed;
-    transform: translateY(0%);
+  @media #{$screen-430}{
+    width: 70%;
+  }
+
+  @media #{$screen-768}{
+    width: 384px;
+  }
+    
+  @media #{$screen-1024}{
+    position: sticky;
+    // left: 10%;
+    transform: translateX(0%);
     flex-shrink: 0;
-    width: 15%;
+    width: 22%;
   }
 
   &--active {
-    transform: translateY(0%);
+    transform: translateX(0%);
   }
 }
 
@@ -139,7 +149,7 @@ export default {
   padding: 24px;
   box-shadow: 0px 0px 10px 3px var(--title-color);
 
-  @media #{$desktop}{
+  @media #{$screen-1024}{
     box-shadow: none;
   }
 
@@ -186,7 +196,7 @@ export default {
   cursor: pointer;
   color: var(--title-color);
 
-  @media #{$desktop}{
+  @media #{$screen-1024}{
     margin-bottom: 0;
   }
 

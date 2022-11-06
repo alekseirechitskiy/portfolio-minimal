@@ -4,8 +4,8 @@
     <p class="works__text text">Repository of projects that I worked before.</p>
     <div class="works__tabs tabs">
       <ul class="tabs__list">
-        <li class="tabs__item tabs__item--active">
-          <a class="tabs__link" href="#">All</a>
+        <li @click="selectTab" class="tabs__item tabs__item--active">
+          <a  class="tabs__link" href="#">All</a>
         </li>
         <li class="tabs__item">
           <a class="tabs__link" href="#">Markups</a>
@@ -98,16 +98,32 @@
   </div>
 </template>
 
+
+<script>
+export default {
+  name: 'Works',
+  components: {
+  },
+  methods: {
+    selectTab(){
+      this.classList.remove('tabs__item--active');
+    }
+  },
+}
+</script>
+
 <style lang="scss">
   .works {
+    box-sizing: border-box;
     width: 100%;
     padding: 15px;
     text-align: left;
-      @media #{$desktop}{
+
+      @media #{$screen-1024}{
       padding: 24px;
       padding-top: 130px;
       height: auto;
-      margin-left: 22%;
+      // margin-left: 384px;
     }
   }
 
@@ -139,22 +155,48 @@
 
   .works__tabs{
     padding-bottom: 24px;
+    width: 100%;
   }
 
   .works__list {
+    // box-sizing: border-box;
+
+    width: 100%;
     margin: 0;
     margin-top: 40px;
     padding: 0;
     list-style: none;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 24px;
+    grid-template-columns: repeat(1, 1fr);
+    // grid-template-rows: repeat(3, 1fr);
+    grid-gap: 15px;
     overflow-y: visible;
+
+    @media #{$screen-500} {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media #{$screen-1024} {
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 24px;
+    }
+
+    @media #{$screen-1280} {
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 24px;
+    }
+  }
+
+  .works__item {
+    box-sizing: border-box;
+
+    width: 100%;
   }
 
   .works__item-link {
     display: block;
-    height: 246px;
+    // height: 246px;
+    // height: 246px;
     position: relative;
   }
 
@@ -186,12 +228,17 @@
   .works__item-link-text {
     font-family: 'Space Grotesk';
     font-weight: 500;
-    font-size: 20px;
-    line-height: 26px;
+    font-size: 18px;
+    line-height: 24px;
     letter-spacing: -0.25px;
     color: #FFFFFF;
     padding-left: 32px;
     position: relative;
+
+     @media #{$screen-1024} {
+    font-size: 20px;
+    line-height: 26px;
+    }
 
     &::before {
       position: absolute;
@@ -205,6 +252,9 @@
   }
 
   .works__item-image {
+    width: 100%;
+    height: auto;
+    vertical-align: bottom;
     object-fit: cover;
     object-position: center;
   }
@@ -219,13 +269,25 @@
     padding-bottom: 15px;
     list-style: none;
     display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
     justify-content: flex-start;
     border-bottom: 1px solid var(--tabs-border);
+
+    @media #{$screen-500} {
+      flex-direction: row;
+    }
   }
 
   .tabs__item {
-    padding: 0 20px;
+    padding: 5px 0;
+
     border-bottom: 1px solid transparent;
+      @media #{$screen-500} {
+    padding: 0 20px;
+
+      }
+
 
     &:first-child{
       padding-left: 0;
@@ -240,13 +302,17 @@
     position: relative;
 
     &::after {
-      position: absolute;
-      content: "";
-      width: 100%;
-      height: 1px;
-      top: 36px;
-      left: 0;
-      background-color: var(--title-color);
+      display: none;
+
+      @media #{$screen-500} {
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 1px;
+        top: 36px;
+        left: 0;
+        background-color: var(--title-color);
+      }
     }
   }
 
@@ -255,6 +321,7 @@
   }
 
   .tabs__link {
+    white-space: nowrap;
     text-decoration: none;
     font-family: 'Space Grotesk';
     font-style: normal;

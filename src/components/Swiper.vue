@@ -4,7 +4,12 @@
     :breakpoints="{
     320: {
       slidesPerView: 1,
+    },
+    768: {
+      slidesPerView: 2,
+
       spaceBetween: 10
+
     },
     1024: {
       slidesPerView: 2,
@@ -93,9 +98,15 @@
 
 .swiper-button-prev {
   top: 20px;
-  left: 67%;
+  // left: 60%;
+  left: auto;
+  right: 40px;
   height: 32px;
   width: 32px;
+
+    @media #{$screen-1024} {
+      left: 60%;
+    }
 
   &::after {
     font-size: 0;
@@ -109,7 +120,12 @@
   height: 32px;
   width: 32px;
   top: 20px;
-  left: 70%;
+  right: 0;
+
+    @media #{$screen-1024} {
+      left: 64%;
+    }
+
 
   &::after {
     font-size: 0;
@@ -142,21 +158,25 @@
   
   .swiper__item-link:hover {
     .swiper__item-link-hover {
-
       opacity: 1;
-
     }
   }
 
   .swiper__item-link-text {
     font-family: 'Space Grotesk';
     font-weight: 500;
-    font-size: 24px;
-    line-height: 31px;
+    font-size: 20px;
+    line-height: 28px;
     letter-spacing: -0.25px;
     color: #FFFFFF;
     padding-left: 32px;
     position: relative;
+
+    @media #{$screen-1024} {
+      font-size: 24px;
+      line-height: 31px;
+    }
+
 
     &::before {
       position: absolute;

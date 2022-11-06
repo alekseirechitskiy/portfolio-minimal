@@ -1,6 +1,7 @@
 :root {
   --bg-color: #F8F4F0;
   --title-color: #000201;
+  --strong-color: #000201;
   --text-color: rgba(0, 2, 1, 0.6);
   --link-color-active: #000201;
   --link-color: rgba(0, 2, 1, 0.4);
@@ -12,6 +13,7 @@
 .dark-mode {
   --bg-color: #000201;
   --title-color: #FFFCF5;
+  --strong-color: #D3902A;
   --text-color: rgba(255, 252, 245, 0.8);
   --link-color-active: #FFFCF5;
   --link-color: rgba(255, 252, 245, 0.3);

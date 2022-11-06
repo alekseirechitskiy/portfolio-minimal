@@ -2,7 +2,6 @@
   <div class="about">
     <h1 class="about__title title">Simply said,<br>I love design and code.</h1>
     <h2 class="about__subtitle subtitle">And... I love music</h2>
-    <Text />
     <p class="about__text text">Based in Moskow, Russia, sometimes in Minsk, Belarus.<br>
     I am currently exploring the <strong>UI/UX design, Tailwind-css</strong> and <strong>Vue 3</strong>.</p>
     <p class="about__text text">
@@ -31,15 +30,15 @@ export default {
     box-sizing:border-box;
     width: 100vw;
     padding: 15px;
+    padding-bottom: 50px;
     text-align: left;
     background-color: var(--bg-color);
 
     @media #{$desktop}{
       width: 100%;
-      padding: 24px;
-      padding-top: 130px;
+      padding: 130px 24px 24px 24px;
+      // padding-top: 130px;
       height: auto;
-      margin-left: 22%;
     }
   }
 
@@ -48,7 +47,8 @@ export default {
     margin: 0;
     margin-bottom: 16px;
     max-width: 300px;
-    @media #{$desktop}{
+
+    @media #{$screen-1024}{
       max-width: 100% ;
     }
   }
@@ -62,7 +62,7 @@ export default {
     margin: 0;
     margin-bottom: 20px;
 
-    @media #{$desktop}{
+    @media #{$screen-1024}{
       font-size: 24px;
       margin-bottom: 40px;
     }
@@ -78,15 +78,15 @@ export default {
     color: var(--text-color);
 
     & strong {
-      color: var(--title-color);
+      color: var(--strong-color);
     }
   }
 
   .about__slider-wrapper {
     position: relative;
-    margin-top: 40px;
+    // margin-top: 40px;
     @media #{$desktop}{
-      margin-top: 60px;
+      // margin-top: 60px;
     }
 
   }

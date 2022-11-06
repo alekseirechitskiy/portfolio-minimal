@@ -70,7 +70,7 @@
     @media #{$desktop}{
       padding: 24px;
       padding-top: 130px;
-      margin-left: 22%;
+      // margin-left: 22%;
     }
   }
 
