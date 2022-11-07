@@ -26,23 +26,20 @@
     padding: 15px;
     text-align: left;
 
-    @media #{$desktop}{
+    @media #{$screen-1024} {
       padding: 24px;
       padding-top: 130px;
       height: auto;
-      // margin-left: 22%;
     }
   }
 
   .contact__title {
     margin: 0;
-
   }
 
   .contact__text {
     margin-bottom: 60px;
     font-family: 'Space Grotesk', Arial, sans-serif;
-
   }
 
   .form {
@@ -67,7 +64,7 @@
       &::after {
         position: absolute;
         content: "*";
-        color: #F73232;
+        color: var(--required-field-mark);
       }
     }
 

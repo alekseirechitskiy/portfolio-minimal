@@ -4,7 +4,7 @@
     <p class="works__text text">Repository of projects that I worked before.</p>
     <div class="works__tabs tabs">
       <ul class="tabs__list">
-        <li @click="selectTab" class="tabs__item tabs__item--active">
+        <li class="tabs__item tabs__item--active">
           <a  class="tabs__link" href="#">All</a>
         </li>
         <li class="tabs__item">
@@ -21,98 +21,37 @@
         </li>
       </ul>
       <ul class="works__list">
-        <li class="works__item">
-          <a class="works__item-link" href="#">
-            <div class="works__item-link-hover">
-              <span class="works__item-link-text">view project</span>
-            </div>
-          <img class="works__item-image" src="../assets/about-3.jpg" alt="slide #2" width="328" height="246">
-          </a>
-        </li>
-        <li class="works__item">
-          <a class="works__item-link" href="#">
-            <div class="works__item-link-hover">
-              <span class="works__item-link-text">view project</span>
-            </div>
-          <img class="works__item-image" src="../assets/works-2.jpg" alt="slide #2" width="328" height="246">
-          </a>
-        </li>
-        <li class="works__item">
-          <a class="works__item-link" href="#">
-            <div class="works__item-link-hover">
-              <span class="works__item-link-text">view project</span>
-            </div>
-          <img class="works__item-image" src="../assets/works-3.jpg" alt="slide #2" width="328" height="246">
-          </a>
-        </li>
-        <li class="works__item">
-          <a class="works__item-link" href="#">
-            <div class="works__item-link-hover">
-              <span class="works__item-link-text">view project</span>
-            </div>
-          <img class="works__item-image" src="../assets/works-4.jpg" alt="slide #2" width="328" height="246">
-          </a>
-        </li>
-        <li class="works__item">
-          <a class="works__item-link" href="#">
-            <div class="works__item-link-hover">
-              <span class="works__item-link-text">view project</span>
-            </div>
-          <img class="works__item-image" src="../assets/works-5.jpg" alt="slide #2" width="328" height="246">
-          </a>
-        </li>
-        <li class="works__item">
-          <a class="works__item-link" href="#">
-            <div class="works__item-link-hover">
-              <span class="works__item-link-text">view project</span>
-            </div>
-          <img class="works__item-image" src="../assets/works-6.jpg" alt="slide #2" width="328" height="246">
-          </a>
-        </li>
-        <li class="works__item">
-          <a class="works__item-link" href="#">
-            <div class="works__item-link-hover">
-              <span class="works__item-link-text">view project</span>
-            </div>
-          <img class="works__item-image" src="../assets/works-5.jpg" alt="slide #2" width="328" height="246">
-          </a>
-        </li>
-        <li class="works__item">
-          <a class="works__item-link" href="#">
-            <div class="works__item-link-hover">
-              <span class="works__item-link-text">view project</span>
-            </div>
-          <img class="works__item-image" src="../assets/works-3.jpg" alt="slide #2" width="328" height="246">
-          </a>
-        </li>
-        <li class="works__item">
-          <a class="works__item-link" href="#">
-            <div class="works__item-link-hover">
-              <span class="works__item-link-text">view project</span>
-            </div>
-          <img class="works__item-image" src="../assets/about-3.jpg" alt="slide #2" width="328" height="246">
-          </a>
+        <li lass="works__item" v-for="item in dataBase.slice(3)" :key="item.id">
+          <CaseCard 
+            :caseImage="item.imagePath"
+            :caseImageDescription="item.imageDescription"
+        />
         </li>
       </ul>
     </div>
   </div>
 </template>
 
-
 <script>
+import CaseCard from '../components/CaseCard.vue';
+import data from "../components/data.js";
 export default {
   name: 'Works',
+  data(){
+    return {
+      dataBase: data,
+    }
+  },
   components: {
+    CaseCard
   },
   methods: {
-    selectTab(){
-      this.classList.remove('tabs__item--active');
-    }
+
   },
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scope>
   .works {
     box-sizing: border-box;
     width: 100%;
@@ -123,7 +62,6 @@ export default {
       padding: 24px;
       padding-top: 130px;
       height: auto;
-      // margin-left: 384px;
     }
   }
 
@@ -159,8 +97,6 @@ export default {
   }
 
   .works__list {
-    // box-sizing: border-box;
-
     width: 100%;
     margin: 0;
     margin-top: 40px;
@@ -168,7 +104,6 @@ export default {
     list-style: none;
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    // grid-template-rows: repeat(3, 1fr);
     grid-gap: 15px;
     overflow-y: visible;
 
@@ -189,19 +124,16 @@ export default {
 
   .works__item {
     box-sizing: border-box;
-
     width: 100%;
+    height: 200px;
   }
 
   .works__item-link {
     display: block;
-    // height: 246px;
-    // height: 246px;
     position: relative;
   }
 
   .works__item-link-hover {
-    // display: none;
     opacity: 0;
     transition: opacity 0.3s;
     display: flex;
@@ -235,9 +167,9 @@ export default {
     padding-left: 32px;
     position: relative;
 
-     @media #{$screen-1024} {
-    font-size: 20px;
-    line-height: 26px;
+    @media #{$screen-1024} {
+      font-size: 20px;
+      line-height: 26px;
     }
 
     &::before {
@@ -281,13 +213,11 @@ export default {
 
   .tabs__item {
     padding: 5px 0;
-
     border-bottom: 1px solid transparent;
-      @media #{$screen-500} {
-    padding: 0 20px;
 
-      }
-
+    @media #{$screen-500} {
+      padding: 0 20px;
+    }
 
     &:first-child{
       padding-left: 0;
@@ -305,6 +235,7 @@ export default {
       display: none;
 
       @media #{$screen-500} {
+        display: block;
         position: absolute;
         content: "";
         width: 100%;

@@ -8,6 +8,7 @@
   --text-color-accent: #D3902A;
   --tabs-border: rgba(0, 0, 0, 0.15);
   --input-field-bg: #F1ECE6;
+  --required-field-mark: #F73232;
 }
 
 .dark-mode {
@@ -34,7 +35,7 @@
   letter-spacing: -0.8px;
   color: var(--title-color);
   
-  @media #{$desktop}{
+  @media #{$screen-1024}{
     font-size: 48px;
   }
 }
@@ -47,7 +48,7 @@
   letter-spacing: -0.25px;
   color: var(--text-color);
 
-  @media #{$desktop}{
+  @media #{$screen-1024}{
     font-size: 24px;
   }
 }

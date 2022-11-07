@@ -1,6 +1,5 @@
 <template>
   <div class="application">
-    
       <button 
         class="toggle-menu"
         @click="toggleMenu"

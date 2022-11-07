@@ -67,10 +67,9 @@
     text-align: left;
     font-family: 'Space Grotesk', Helvetica, Arial, sans-serif;
     
-    @media #{$desktop}{
+    @media #{$screen-1024} {
       padding: 24px;
       padding-top: 130px;
-      // margin-left: 22%;
     }
   }
 
@@ -111,7 +110,7 @@
     flex-direction: column;
     margin-bottom: 24px;
     
-    @media #{$desktop}{
+    @media #{$screen-1024} {
       flex-direction: row;
     }
 
@@ -127,7 +126,8 @@
     font-size: 20px;
     line-height: 26px;
     color: var(--title-color);
-    @media #{$desktop}{
+    
+    @media #{$screen-1024} {
       margin-bottom: 0;
     }
   }
