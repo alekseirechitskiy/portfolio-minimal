@@ -3,7 +3,8 @@
     <h1 class="works__title title">Works</h1>
     <p class="works__text text">Repository of projects that I worked before.</p>
     <div class="works__tabs tabs">
-      <ul class="tabs__list">
+      <TabsNavigation />
+      <!-- <ul class="tabs__list">
         <li class="tabs__item tabs__item--active">
           <a  class="tabs__link" href="#">All</a>
         </li>
@@ -19,7 +20,7 @@
         <li class="tabs__item">
           <a class="tabs__link" href="#">React</a>
         </li>
-      </ul>
+      </ul> -->
       <ul class="works__list">
         <li lass="works__item" v-for="item in dataBase.slice(3)" :key="item.id">
           <CaseCard 
@@ -33,8 +34,9 @@
 </template>
 
 <script>
-import CaseCard from '../components/CaseCard.vue';
 import data from "../components/data.js";
+import CaseCard from '../components/CaseCard.vue';
+import TabsNavigation from '../components/TabsNavigation.vue';
 export default {
   name: 'Works',
   data(){
@@ -43,7 +45,8 @@ export default {
     }
   },
   components: {
-    CaseCard
+    CaseCard,
+    TabsNavigation
   },
   methods: {
 
@@ -58,7 +61,7 @@ export default {
     padding: 15px;
     text-align: left;
 
-      @media #{$screen-1024}{
+    @media #{$screen-1024}{
       padding: 24px;
       padding-top: 130px;
       height: auto;
@@ -191,76 +194,76 @@ export default {
     object-position: center;
   }
 
-  .tabs {
-    display: inline-block;
-  }
+  // .tabs {
+  //   display: inline-block;
+  // }
 
-  .tabs__list {
-    margin: 0;
-    padding: 0;
-    padding-bottom: 15px;
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    border-bottom: 1px solid var(--tabs-border);
+  // .tabs__list {
+  //   margin: 0;
+  //   padding: 0;
+  //   padding-bottom: 15px;
+  //   list-style: none;
+  //   display: flex;
+  //   flex-direction: column;
+  //   flex-wrap: wrap;
+  //   justify-content: flex-start;
+  //   border-bottom: 1px solid var(--tabs-border);
 
-    @media #{$screen-500} {
-      flex-direction: row;
-    }
-  }
+  //   @media #{$screen-500} {
+  //     flex-direction: row;
+  //   }
+  // }
 
-  .tabs__item {
-    padding: 5px 0;
-    border-bottom: 1px solid transparent;
+  // .tabs__item {
+  //   padding: 5px 0;
+  //   border-bottom: 1px solid transparent;
 
-    @media #{$screen-500} {
-      padding: 0 20px;
-    }
+  //   @media #{$screen-500} {
+  //     padding: 0 20px;
+  //   }
 
-    &:first-child{
-      padding-left: 0;
-    }
+  //   &:first-child{
+  //     padding-left: 0;
+  //   }
 
-    &:last-child{
-      padding-right: 0;
-    }
-  }
+  //   &:last-child{
+  //     padding-right: 0;
+  //   }
+  // }
 
-  .tabs__item--active {
-    position: relative;
+  // .tabs__item--active {
+  //   position: relative;
 
-    &::after {
-      display: none;
+  //   &::after {
+  //     display: none;
 
-      @media #{$screen-500} {
-        display: block;
-        position: absolute;
-        content: "";
-        width: 100%;
-        height: 1px;
-        top: 36px;
-        left: 0;
-        background-color: var(--title-color);
-      }
-    }
-  }
+  //     @media #{$screen-500} {
+  //       display: block;
+  //       position: absolute;
+  //       content: "";
+  //       width: 100%;
+  //       height: 1px;
+  //       top: 36px;
+  //       left: 0;
+  //       background-color: var(--title-color);
+  //     }
+  //   }
+  // }
 
-  .tabs__item--active .tabs__link {
-    color: var(--title-color);
-  }
+  // .tabs__item--active .tabs__link {
+  //   color: var(--title-color);
+  // }
 
-  .tabs__link {
-    white-space: nowrap;
-    text-decoration: none;
-    font-family: 'Space Grotesk';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 20px;
-    letter-spacing: -0.25px;
-    color: var(--text-color);
-  }
+  // .tabs__link {
+  //   white-space: nowrap;
+  //   text-decoration: none;
+  //   font-family: 'Space Grotesk';
+  //   font-style: normal;
+  //   font-weight: 400;
+  //   font-size: 16px;
+  //   line-height: 20px;
+  //   letter-spacing: -0.25px;
+  //   color: var(--text-color);
+  // }
 
 </style>

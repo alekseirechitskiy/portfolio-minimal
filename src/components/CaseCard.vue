@@ -27,8 +27,6 @@ export default {
   object-fit: cover;
   object-position: center;
   vertical-align: bottom;
-  // width: 486px;
-  // height: 358px;
 }
 
 .case-card__link {
