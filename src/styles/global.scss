@@ -53,6 +53,22 @@
   }
 }
 
+.button {
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 23px;
+  letter-spacing: -0.25px;
+  color: #F8F4F0;
+  background-color: #000201;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .overflow-y-hidden{
   overflow-y: hidden;
 }

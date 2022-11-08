@@ -22,57 +22,58 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  .about {
-    box-sizing:border-box;
-    width: 100vw;
-    padding: 15px;
-    padding-bottom: 50px;
-    text-align: left;
-    background-color: var(--bg-color);
+.about {
+  box-sizing:border-box;
+  width: 100vw;
+  padding: 15px;
+  padding-bottom: 50px;
+  text-align: left;
+  background-color: var(--bg-color);
 
-    @media #{$screen-1024} {
-      width: 100%;
-      padding: 130px 24px 24px 24px;
-      height: auto;
-    }
+  @media #{$screen-1024} {
+    width: 100%;
+    padding: 130px 24px 24px 24px;
+    height: auto;
   }
+}
 
-  .about__title {
-    margin: 0;
-    margin-bottom: 16px;
-    max-width: 300px;
+.about__title {
+  margin: 0;
+  margin-bottom: 16px;
+  max-width: 300px;
 
-    @media #{$screen-1024} {
-      max-width: 100% ;
-    }
+  @media #{$screen-1024} {
+    max-width: 100% ;
   }
+}
 
-  .about__subtitle {
-    font-family: 'Space Grotesk', Helvetica, Arial, sans-serif;
-    font-weight: 700;
-    font-size: 22px;
-    line-height: 31px;
-    color: var(--text-color-accent);
-    margin: 0;
-    margin-bottom: 20px;
+.about__subtitle {
+  font-family: 'Space Grotesk', Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 31px;
+  color: var(--text-color-accent);
+  margin: 0;
+  margin-bottom: 20px;
 
-    @media #{$screen-1024} {
-      font-size: 24px;
-      margin-bottom: 40px;
-    }
+  @media #{$screen-1024} {
+    font-size: 24px;
+    margin-bottom: 40px;
   }
+}
 
-  .about__text {
-    font-family: 'Space Grotesk', Helvetica, Arial, sans-serif;
-    font-weight: 400;
-    letter-spacing: -0.25px;
-    max-width: 508px;
-    margin: 0;
-    margin-bottom: 24px;
-    color: var(--text-color);
+.about__text {
+  font-family: 'Space Grotesk', Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  letter-spacing: -0.25px;
+  max-width: 508px;
+  margin: 0;
+  margin-bottom: 24px;
+  color: var(--text-color);
 
-    & strong {
-      color: var(--strong-color);
-    }
+  & strong {
+    color: var(--strong-color);
   }
+}
+
 </style>

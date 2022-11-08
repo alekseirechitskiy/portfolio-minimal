@@ -36,8 +36,7 @@ export default {
 }
 </script>
 
-<style scope lang="scss">
-
+<style lang="scss" scoped>
 .tabs {
   display: inline-block;
 }
@@ -61,8 +60,6 @@ export default {
 .tabs__item {
   padding: 5px 0;
   position: relative;
-  // border-bottom: 1px solid transparent;
-  // transition: all 0.3s;
 
   &::after {
     display: none;
@@ -75,8 +72,7 @@ export default {
       height: 1px;
       top: 35px;
       left: 0;
-      // background-color: rgba(#000, 0);
-      // background-color: rgba(var(--title-color), 0);
+      opacity: 0;
       transition: all 0.3s;
     }
   }
@@ -88,19 +84,13 @@ export default {
   &:first-child{
     padding-left: 0;
   }
-
-  &:last-child{
-    // padding-right: 0;
-  }
 }
 
 .tabs__item.tabs__item--active {
   position: relative;
-  // transition: all 0.3s;
 
   &::after {
     display: none;
-    // transition: all 0.3s;
 
     @media #{$screen-500} {
       display: block;
@@ -110,8 +100,8 @@ export default {
       height: 1px;
       top: 35px;
       left: 0;
-      background-color: rgba(#000, 1);
-      // background-color: rgba(var(--title-color), 1);
+      background-color: var(--title-color);
+      opacity: 1;
       transition: all 0.3s;
     }
   }

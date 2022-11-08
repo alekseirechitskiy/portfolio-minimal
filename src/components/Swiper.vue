@@ -60,69 +60,68 @@
     },
   };
 </script>
-<style lang="scss">
-  .wrapper {
-    position: relative;
+<style lang="scss" >
+.wrapper {
+  position: relative;
 
-    @media #{$screen-1024} {
-      padding-right: 52px;
-    }
+  @media #{$screen-1024} {
+    padding-right: 52px;
+  }
+}
+
+.swiper {
+  padding-top: 40px;
+}
+
+.swiper__slide {
+  width: 100%;
+}
+
+.swiper-button-prev {
+  top: 20px;
+  left: auto;
+  right: 40px;
+  height: 32px;
+  width: 32px;
+
+  @media #{$screen-1024} {
+    left: 60%;
   }
 
-  .swiper {
-    padding-top: 40px;
-  }
-
-  .swiper__slide {
-    width: 100%;
-    // width: 486px;
-    // height: 358px;
-  }
-
-  .swiper-button-prev {
-    top: 20px;
-    left: auto;
-    right: 40px;
+  &::after {
+    font-size: 0;
+    background-image: url("../assets/icons/arrow-left.svg");
     height: 32px;
     width: 32px;
+  }
+}
 
-    @media #{$screen-1024} {
-      left: 60%;
-    }
+.swiper-button-next {
+  height: 32px;
+  width: 32px;
+  top: 20px;
+  right: 0;
 
-    &::after {
-      font-size: 0;
-      background-image: url("../assets/icons/arrow-left.svg");
-      height: 32px;
-      width: 32px;
-    }
+  @media #{$screen-1024} {
+    left: 64%;
   }
 
-  .swiper-button-next {
+  &::after {
+    font-size: 0;
+    background-image: url("../assets/icons/arrow-right.svg");
     height: 32px;
     width: 32px;
-    top: 20px;
-    right: 0;
+  }
+}
 
-    @media #{$screen-1024} {
-      left: 64%;
-    }
-
-    &::after {
-      font-size: 0;
-      background-image: url("../assets/icons/arrow-right.svg");
-      height: 32px;
-      width: 32px;
-    }
+.dark-mode {
+  .swiper-button-prev::after {
+    background-image: url("../assets/icons/arrow-left-white.svg");
   }
 
-  .dark-mode {
-    .swiper-button-prev::after {
-      background-image: url("../assets/icons/arrow-left-white.svg");
-    }
-
-    .swiper-button-next::after {
-      background-image: url("../assets/icons/arrow-right-white.svg");
-    }
+  .swiper-button-next::after {
+    background-image: url("../assets/icons/arrow-right-white.svg");
   }
+}
+
 </style>

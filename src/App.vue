@@ -32,7 +32,6 @@
 <script>
 export default {
   name: 'App',
-  // components:,
   methods: {
     toggleMenu(){
       const menu = document.querySelector('.menu');
@@ -60,7 +59,6 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
   box-sizing: border-box;
   height: 100vh;
   background-color: var(--bg-color);
@@ -77,7 +75,7 @@ export default {
   background-color: var(--bg-color);
 }
 
-.toggle-menu{
+.toggle-menu {
   display: block;
   position: fixed;
   right: 17px;
@@ -94,7 +92,7 @@ export default {
     display: none;
   }
 
-  span{
+  span {
     display: block;
     background-color: var(--title-color);
     width: 100%;
@@ -106,7 +104,6 @@ export default {
 }
 
 .menu {
-  // border: 1px solid #000;
   position: fixed;
   top: 0;
   left: 0;
@@ -124,10 +121,9 @@ export default {
   @media #{$screen-768}{
     width: 384px;
   }
-    
+
   @media #{$screen-1024}{
     position: sticky;
-    // left: 10%;
     transform: translateX(0%);
     flex-shrink: 0;
     width: 22%;
@@ -138,7 +134,7 @@ export default {
   }
 }
 
-.navigation  {
+.navigation {
   box-sizing: border-box;
   width: 100%;
   height: 100%;
@@ -148,7 +144,7 @@ export default {
   padding: 24px;
   box-shadow: 0px 0px 10px 3px var(--title-color);
 
-  @media #{$screen-1024}{
+  @media #{$screen-1024} {
     box-shadow: none;
   }
 
@@ -195,16 +191,15 @@ export default {
   cursor: pointer;
   color: var(--title-color);
 
-  @media #{$screen-1024}{
+  @media #{$screen-1024} {
     margin-bottom: 0;
   }
 
-  svg{
-    path{
+  svg {
+    path {
       stroke: var(--title-color);
     }
   }
 }
-
 
 </style>

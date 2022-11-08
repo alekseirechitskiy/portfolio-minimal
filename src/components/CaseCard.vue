@@ -16,7 +16,7 @@ export default {
 }
 </script>
 
-<style scope lang="scss">
+<style lang="scss" scoped>
 .case-card {
   width: 100%;
   height: auto;
@@ -31,7 +31,6 @@ export default {
 
 .case-card__link {
   display: block;
-  // height: 358px;
   position: relative;
 }
 
