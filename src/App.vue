@@ -4,7 +4,7 @@
       class="toggle-menu"
       @click="toggleMenu"
       >
-        <span></span>
+      <span></span>
     </button>
     <div class="overlay" @click="closeMenu"></div>
     <div class="menu">

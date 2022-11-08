@@ -1,19 +1,19 @@
 <template>
   <ul class="tabs__list">
-    <li class="tabs__item " @click="setActive('tab-1')" :class="{'tabs__item--active' : isActive('tab-1')}">
-      <a  class="tabs__link" href="#">All</a>
+    <li class="tabs__item" @click="setActive('tab-1')" :class="{'tabs__item--active' : isActive('tab-1')}">
+      <div class="tabs__link" >All</div>
     </li>
     <li class="tabs__item" @click="setActive('tab-2')" :class="{'tabs__item--active' : isActive('tab-2')}">
-      <a class="tabs__link" href="#">Markups</a>
+      <div class="tabs__link">Markups</div>
     </li>
     <li class="tabs__item" @click="setActive('tab-3')" :class="{'tabs__item--active' : isActive('tab-3')}">
-      <a class="tabs__link" href="#">Vanila JS</a>
+      <div class="tabs__link">Vanila JS</div>
     </li>
     <li class="tabs__item" @click="setActive('tab-4')" :class="{'tabs__item--active' : isActive('tab-4')}">
-      <a class="tabs__link" href="#">Vue</a>
+      <div class="tabs__link">Vue</div>
     </li>
     <li class="tabs__item" @click="setActive('tab-5')" :class="{'tabs__item--active' : isActive('tab-5')}">
-      <a class="tabs__link" href="#">React</a>
+      <div class="tabs__link">React</div>
     </li>
   </ul>
 </template>
@@ -127,6 +127,7 @@ export default {
   line-height: 20px;
   letter-spacing: -0.25px;
   color: var(--text-color);
+  cursor: pointer;
 }
 
 </style>
