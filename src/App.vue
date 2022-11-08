@@ -1,11 +1,12 @@
 <template>
   <div class="application">
-      <button 
-        class="toggle-menu"
-        @click="toggleMenu"
-        >
-          <span></span>
-      </button>
+    <button 
+      class="toggle-menu"
+      @click="toggleMenu"
+      >
+        <span></span>
+    </button>
+    <div class="overlay" @click="closeMenu"></div>
     <div class="menu">
       <nav class="navigation">
         <router-link @click="closeMenu" class="logo" to="/">johnsmith.</router-link>
@@ -26,7 +27,6 @@
     </div>
     <router-view/>
   </div>
-
 </template>
 
 <script>
@@ -35,14 +35,18 @@ export default {
   methods: {
     toggleMenu(){
       const menu = document.querySelector('.menu');
+      const overlay = document.querySelector('.overlay');
       const app = document.querySelector('#app');
       menu.classList.toggle('menu--active');
+      overlay.classList.toggle('overlay--open');
       app.classList.toggle('overflow-y-hidden');
     },
     closeMenu(){
       const menu = document.querySelector('.menu');
+      const overlay = document.querySelector('.overlay');
       const app = document.querySelector('#app');
       menu.classList.remove('menu--active');
+      overlay.classList.remove('overlay--open');
       app.classList.remove('overflow-y-hidden');
     },
     setDarkMode(){
@@ -103,13 +107,34 @@ export default {
   }
 }
 
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100vh;
+  background-color: transparent;
+  z-index: 5;
+  opacity: 0.7;
+  transform: translateX(-105%);
+
+  @media #{$screen-1024} {
+    display: none;
+  }
+
+  &--open {
+    transform: translateX(0%);
+  }
+}
+
 .menu {
   position: fixed;
   top: 0;
   left: 0;
   background-color: var(--bg-color);
   height: 100vh;
-  z-index: 5;
+  z-index: 10;
   width: 100%;
   transform: translateX(-105%);
   transition: transform 0.3s ease-in;
