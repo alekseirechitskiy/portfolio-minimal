@@ -1,19 +1,9 @@
-# vue-portfolio-minimal
+# portfolio-minimal
 
-## Project setup
-```
-npm install
-```
+## Responsive SPA - minimalictic portfolio for frontend developer (not for me :slightly_smiling_face: ).
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+## Адаптивное одностраничное приложение - минималистичное портфолиа для фронтенд разработчика ( не для меня :slightly_smiling_face: ).
 
-### Compiles and minifies for production
-```
-npm run build
-```
+https://alekseirechitskiy.github.io/portfolio-minimal/
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+<img src="./minimal-portfolio_mockup_700.jpg">
