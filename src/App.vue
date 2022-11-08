@@ -84,7 +84,7 @@ export default {
   position: fixed;
   right: 17px;
   top: 13px;
-  z-index: 10;
+  z-index: 15;
   height: 40px;
   width: 40px;
   padding: 0;
@@ -139,15 +139,15 @@ export default {
   transform: translateX(-105%);
   transition: transform 0.3s ease-in;
 
-  @media #{$screen-430}{
+  @media #{$screen-430} {
     width: 70%;
   }
 
-  @media #{$screen-768}{
+  @media #{$screen-768} {
     width: 384px;
   }
 
-  @media #{$screen-1024}{
+  @media #{$screen-1024} {
     position: sticky;
     transform: translateX(0%);
     flex-shrink: 0;
